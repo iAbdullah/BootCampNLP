@@ -10,11 +10,20 @@
 
 ---
 
+## 🚀 Concept: Proving General Utility of Embeddings
+This project is designed to meet the requirements of exploring NLP techniques beyond simple text classification:
+* **Another Dataset**: Instead of using standard song/video playlists, we applied Recommender System concepts to **Professional Resumes**.
+* **Tokens are not just Words**: In this model, tokens represent **Technical Skills and Professional IDs**, proving that mathematical embeddings are useful in diverse domains like HR and Recruitment.
+
+
+
+---
+
 ## 🌟 Key Features
 * **Unsupervised Categorization** 🧠: Automatically groups resumes into themes like *AI, Web Dev, or HR*.
 * **Multilingual NLP** 🌍: Optimized for cleaning and processing both **Arabic and English** text.
-* **Flexible Data Loader** 📄: Robustly handles various JSON structures (Lists and Dictionaries).
-* **Folder-Based Organization** 📁: Automatically creates a directory structure and moves files based on their dominant topic.
+* **Flexible Data Loader** 📄: Handles various JSON structures (Lists and Dictionaries).
+* **Folder-Based Organization** 📁: Automatically creates a directory structure based on dominant topics.
 
 ---
 
@@ -28,16 +37,16 @@
 | **4. Modeling** | `LDA` | Learns the distribution of words across a set number of topics. |
 | **5. Sorting** | `shutil` | Automatically moves CVs into folders based on the model's prediction. |
 
+---
 
+## 📊 How to Use
+1. **Prepare Data**: Place your JSON CV files in the `datasets/` folder.
+2. **Run the Notebook**: Open `08_topic_modeling_ex.ipynb` and run all cells.
+3. **Check Results**: View the `output/organized_cvs/` folder to see your resumes automatically sorted.
 
 ---
 
-## 📁 Repository Structure
-```text
-├── 08_topic_modeling_ex.ipynb   # 📓 Main Python Notebook
-├── datasets/                    # 📥 Input: Raw JSON CV files
-└── output/                      # 📤 Output: Categorized Results
-    └── organized_cvs/
-        ├── Topic_1/             # 💻 e.g., Software Engineering
-        ├── Topic_2/             # 📊 e.g., Data Science
-        └── Topic_3/             # 🛠️ e.g., Operations
+## 💡 Why LDA for CVs?
+Latent Dirichlet Allocation is a generative statistical model that proves:
+* **Efficiency**: No need to manually read thousands of CVs to categorize them.
+* **Accuracy**: It finds recurring patterns (tokens) that define a specific career path
